@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>💖 For You, Eman</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: black;
+      text-align: center;
+      padding: 80px 20px;
+      overflow-y: auto;
+    }
+
+    /* Background image */
+    .bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('pic2.jpg') center/cover no-repeat;
+      opacity: 0.35;
+      z-index: -1;
+    }
+
+    .note {
+      max-width: 650px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 20px;
+      animation: float 6s linear infinite;
+      color: rgba(255,255,255,0.8);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-100vh); opacity: 0; }
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="bg"></div>
+
+  <div class="note">
+    <p>
+     Meri jaan,<br><br>
+      i think with time you're starting to forget
+      just how much in love i am with you. 
+      The way you make ordinary moments feel important,
+      the way you make me smile without even trying, 
+      the way your beautiful eyes pull me in, and the way
+      even your eye rolls somehow make me fall deeper in love —
+      it all means more to me than I can explain.<br><br>
+
+      I’m grateful for you, for us, and for every moment
+      I get to spend with you. I can’t wait to make
+      more memories together ❤️<br><br>
+         I love you so muchhh 💕
+    </p>
+  </div>
+
+  <script>
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }, 300);
+  </script>
+
+</body>
+</html>
